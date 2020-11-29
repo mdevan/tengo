@@ -10,11 +10,11 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/d5/tengo/v2"
-	"github.com/d5/tengo/v2/parser"
-	"github.com/d5/tengo/v2/require"
-	"github.com/d5/tengo/v2/stdlib"
-	"github.com/d5/tengo/v2/token"
+	"github.com/mdevan/tengo/v2"
+	"github.com/mdevan/tengo/v2/parser"
+	"github.com/mdevan/tengo/v2/require"
+	"github.com/mdevan/tengo/v2/stdlib"
+	"github.com/mdevan/tengo/v2/token"
 )
 
 const testOut = "out"
@@ -1794,7 +1794,7 @@ func() {
 		nil, tengo.UndefinedValue)
 
 	// 'f' in RHS at line 4 must reference global variable 'f'
-	// See https://github.com/d5/tengo/issues/314
+	// See https://github.com/mdevan/tengo/issues/314
 	expectRun(t, `
 f := func() { return 2 }
 out = (func() {
